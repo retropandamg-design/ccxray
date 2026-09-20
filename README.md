@@ -7,7 +7,7 @@ Claude Code already writes a full transcript of every session to `~/.claude/proj
 went, and how much of it was burned on rework.
 
 ```bash
-curl -O https://raw.githubusercontent.com/OWNER/ccxray/main/ccxray.py
+curl -O https://raw.githubusercontent.com/retropandamg-design/ccxray/main/ccxray.py
 python3 ccxray.py
 ```
 
