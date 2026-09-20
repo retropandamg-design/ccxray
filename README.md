@@ -96,6 +96,17 @@ identify nothing and are the useful part of the report. Numbers are untouched.
 
 Use it before you post a screenshot. Your repo names are in those transcripts.
 
+## Going further
+
+`ccxray` tells you where the money went. If you want the other half — what to
+change, and a hook that warns you mid-session before a session gets expensive —
+there's a paid companion, **The Claude Code Cost Playbook**:
+<https://retropanda.gumroad.com/l/ywzwt>
+
+It's a short guide plus two installable hooks. `ccxray` is free forever and is
+not crippled to sell it: run the tool first, and if your cost curve is flat you
+don't need the playbook.
+
 ## A note on the numbers
 
 These are **list API prices**, which is the honest way to value the tokens

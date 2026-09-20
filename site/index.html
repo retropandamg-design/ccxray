@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ccxray — see what your Claude Code sessions actually cost</title>
+<meta name="description" content="A free, single-file tool that reads your Claude Code session transcripts and shows what they cost: cache reads vs output, a per-turn cost curve, tool failures and rework. No dependencies, no network calls.">
+<link rel="canonical" href="https://retropandamg-design.github.io/ccxray/">
+<meta property="og:title" content="ccxray — see what your Claude Code sessions actually cost">
+<meta property="og:description" content="Reads the transcripts already on your disk. One file, no dependencies, no network calls. MIT.">
+<meta property="og:type" content="website">
+<style>
+:root{color-scheme:light;--bg:#fbfaf7;--panel:#fff;--rule:#e4e1d9;--ink:#15140f;
+  --ink2:#51504a;--ink3:#86837a;--accent:#1f5fae;--code:#f2f0e9}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;
+  --bg:#131310;--panel:#1b1b17;--rule:#302f29;--ink:#f6f4ec;--ink2:#c4c1b4;
+  --ink3:#8c8a7e;--accent:#74a8ec;--code:#21211b}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#131310;--panel:#1b1b17;--rule:#302f29;
+  --ink:#f6f4ec;--ink2:#c4c1b4;--ink3:#8c8a7e;--accent:#74a8ec;--code:#21211b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding-block:56px 80px;padding-left:16px;padding-right:16px}
+h1{font-size:2.1rem;margin:0 0 8px;letter-spacing:-.025em;text-wrap:balance}
+h2{font-size:1.25rem;margin:44px 0 10px;letter-spacing:-.01em}
+.lede{font-size:1.15rem;color:var(--ink2);margin:0 0 26px;text-wrap:balance}
+pre{background:var(--code);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;
+  overflow-x:auto;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin:0 0 20px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+img{max-width:100%;border:1px solid var(--rule);border-radius:10px}
+a{color:var(--accent)}
+.cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  padding:11px 20px;border-radius:8px;font-weight:600;margin:0 10px 10px 0}
+.cta.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+ul{padding-left:22px}li{margin-bottom:9px;color:var(--ink2)}
+.note{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:8px;padding:16px 18px;color:var(--ink2);font-size:.95rem;margin:0 0 20px}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--rule);
+  color:var(--ink3);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ccxray</h1>
+<p class="lede">See what your Claude Code sessions actually cost — from the
+transcripts already sitting on your disk.</p>
+
+<p><a class="cta" href="https://github.com/retropandamg-design/ccxray">Get it on GitHub</a>
+<a class="cta ghost" href="https://retropanda.gumroad.com/l/ywzwt">The Cost Playbook &rarr;</a></p>
+
+<pre><code>curl -O https://raw.githubusercontent.com/retropandamg-design/ccxray/main/ccxray.py
+python3 ccxray.py</code></pre>
+
+<p>No install, no signup, no API key, and no network calls of any kind.</p>
+
+<img src="demo.svg" alt="A sample ccxray report showing cost breakdown, spend by project, and a per-turn cost curve">
+<p style="color:var(--ink3);font-size:.85rem">Sample report, generated from the
+synthetic data bundled with the repo — not anyone's real sessions.</p>
+
+<h2>Why a Claude Code session gets more expensive as it goes</h2>
+<p>A language model has no memory between calls, so continuing a conversation
+means sending the whole conversation again. Claude Code does that on every turn.
+Prompt caching makes repeated context cheap — a tenth of the normal input rate —
+but it is still charged every turn.</p>
+<p>So the cost of turn <em>N</em> scales with <em>N</em>, and a whole session
+scales with <em>N&sup2;</em>. Finishing a task and starting a fresh session is
+meaningfully cheaper than appending to a long one. ccxray shows you your own
+version of that curve.</p>
+
+<h2>What it reports</h2>
+<ul>
+<li><strong>Where the money goes</strong> — cache reads (re-sent context) vs output vs cache writes vs fresh input, priced separately.</li>
+<li><strong>The cost curve</strong> — what one response costs at turn 10 against turn 200 of the same session.</li>
+<li><strong>Rework</strong> — tool calls that errored, and commands retried after already failing in that session.</li>
+<li><strong>Deduplicated totals</strong> — resuming or branching a session copies earlier turns into a new file, so naive summing overstates the bill. ccxray dedupes on message ID and reports what it skipped.</li>
+<li><strong>By project, session and day</strong>, as a terminal report, standalone HTML, or JSON.</li>
+</ul>
+
+<div class="note">
+<strong>Sharing a report?</strong> <code>--anonymize</code> masks project names,
+session titles, file paths and MCP tool names (those embed the server name, which
+says what you work on). Numbers are untouched. Use it before you screenshot
+anything — your repo names are in those transcripts.
+</div>
+
+<h2>Try it without your own data</h2>
+<pre><code>python3 make_sample.py sample/
+python3 ccxray.py --dir sample/</code></pre>
+
+<h2>Privacy</h2>
+<p>ccxray opens files under <code>~/.claude/projects</code>, reads them, and
+prints. No telemetry, no account, no upload. It is one readable Python file —
+read it before you run it, as you should with anything that touches your
+transcripts.</p>
+
+<footer>
+MIT licensed · Python 3.8+ · <a href="https://github.com/retropandamg-design/ccxray">source on GitHub</a>
+</footer>
+
+</div>
+</body>
+</html>
