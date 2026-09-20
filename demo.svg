@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="655" height="1115" viewBox="0 0 655 1115" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13">
+<rect width="655" height="1115" rx="10" fill="#12120f"/>
+<path d="M0 10a10 10 0 0 1 10-10h635 a10 10 0 0 1 10 10v20H0z" fill="#1d1d18"/>
+<circle cx="20" cy="15" r="5.5" fill="#e0655d"/>
+<circle cx="39" cy="15" r="5.5" fill="#d9a441"/>
+<circle cx="58" cy="15" r="5.5" fill="#7dc98a"/>
+<text x="327" y="19.5" fill="#83817a" font-size="11.5" text-anchor="middle">ccxray  —  sample data</text>
+<text xml:space="preserve" x="26.0" y="63.0" fill="#d6d3c6">  ccxray  —  what your Claude Code sessions actually cost</text>
+<text xml:space="preserve" x="26.0" y="101.0" fill="#34342c">  ──────────────────────────────────────────────────────────────</text>
+<text xml:space="preserve" x="26.0" y="120.0" fill="#d6d3c6">  </text>
+<text xml:space="preserve" x="42.1" y="120.0" fill="#7dc98a" font-weight="bold">$93.27</text>
+<text xml:space="preserve" x="90.4" y="120.0" fill="#d6d3c6">   across 25 sessions, 103.8M tokens, 2026-04-06 → 2026-04-17</text>
+<text xml:space="preserve" x="26.0" y="139.0" fill="#34342c">  ──────────────────────────────────────────────────────────────</text>
+<text xml:space="preserve" x="26.0" y="177.0" fill="#fbfaf5" font-weight="bold">  WHERE THE MONEY GOES</text>
+<text xml:space="preserve" x="26.0" y="196.0" fill="#d6d3c6">    cache reads (re-sent context)  </text>
+<text xml:space="preserve" x="307.8" y="196.0" fill="#5fb3cf">███████████</text>
+<text xml:space="preserve" x="396.3" y="196.0" fill="#3a3a31">···········</text>
+<text xml:space="preserve" x="484.9" y="196.0" fill="#d6d3c6">  50.8%  $   47.43</text>
+<text xml:space="preserve" x="26.0" y="215.0" fill="#d6d3c6">    output (what Claude wrote)     </text>
+<text xml:space="preserve" x="307.8" y="215.0" fill="#5fb3cf">████</text>
+<text xml:space="preserve" x="339.9" y="215.0" fill="#3a3a31">··················</text>
+<text xml:space="preserve" x="484.9" y="215.0" fill="#d6d3c6">  19.3%  $   18.02</text>
+<text xml:space="preserve" x="26.0" y="234.0" fill="#d6d3c6">    cache writes (new context)     </text>
+<text xml:space="preserve" x="307.8" y="234.0" fill="#5fb3cf">███████</text>
+<text xml:space="preserve" x="364.1" y="234.0" fill="#3a3a31">···············</text>
+<text xml:space="preserve" x="484.9" y="234.0" fill="#d6d3c6">  29.8%  $   27.82</text>
+<text xml:space="preserve" x="26.0" y="253.0" fill="#d6d3c6">    fresh input                    </text>
+<text xml:space="preserve" x="307.8" y="253.0" fill="#3a3a31">······················</text>
+<text xml:space="preserve" x="484.9" y="253.0" fill="#d6d3c6">   0.0%  $    0.01</text>
+<text xml:space="preserve" x="26.0" y="291.0" fill="#fbfaf5" font-weight="bold">  BY PROJECT</text>
+<text xml:space="preserve" x="26.0" y="310.0" fill="#d6d3c6">    work/checkout-service              </text>
+<text xml:space="preserve" x="340.0" y="310.0" fill="#5fb3cf">██████████████</text>
+<text xml:space="preserve" x="452.7" y="310.0" fill="#d6d3c6"> $   59.53</text>
+<text xml:space="preserve" x="26.0" y="329.0" fill="#d6d3c6">    work/etl-pipeline                  </text>
+<text xml:space="preserve" x="340.0" y="329.0" fill="#5fb3cf">███</text>
+<text xml:space="preserve" x="364.1" y="329.0" fill="#3a3a31">···········</text>
+<text xml:space="preserve" x="452.7" y="329.0" fill="#d6d3c6"> $   11.86</text>
+<text xml:space="preserve" x="26.0" y="348.0" fill="#d6d3c6">    work/design-system                 </text>
+<text xml:space="preserve" x="340.0" y="348.0" fill="#5fb3cf">██</text>
+<text xml:space="preserve" x="356.1" y="348.0" fill="#3a3a31">············</text>
+<text xml:space="preserve" x="452.7" y="348.0" fill="#d6d3c6"> $    8.33</text>
+<text xml:space="preserve" x="26.0" y="367.0" fill="#d6d3c6">    work/docs-site                     </text>
+<text xml:space="preserve" x="340.0" y="367.0" fill="#5fb3cf">██</text>
+<text xml:space="preserve" x="356.1" y="367.0" fill="#3a3a31">············</text>
+<text xml:space="preserve" x="452.7" y="367.0" fill="#d6d3c6"> $    7.45</text>
+<text xml:space="preserve" x="26.0" y="386.0" fill="#d6d3c6">    scratch/spike                      </text>
+<text xml:space="preserve" x="340.0" y="386.0" fill="#5fb3cf">█</text>
+<text xml:space="preserve" x="348.0" y="386.0" fill="#3a3a31">·············</text>
+<text xml:space="preserve" x="452.7" y="386.0" fill="#d6d3c6"> $    6.09</text>
+<text xml:space="preserve" x="26.0" y="424.0" fill="#fbfaf5" font-weight="bold">  BY MODEL</text>
+<text xml:space="preserve" x="26.0" y="443.0" fill="#d6d3c6">    claude-opus-5                834 calls  $   89.95</text>
+<text xml:space="preserve" x="26.0" y="462.0" fill="#d6d3c6">    claude-sonnet-5               75 calls  $    3.32</text>
+<text xml:space="preserve" x="26.0" y="500.0" fill="#fbfaf5" font-weight="bold">  MOST EXPENSIVE SESSIONS</text>
+<text xml:space="preserve" x="26.0" y="519.0" fill="#d6d3c6">    $  43.37  Clean up dead config                        / </text>
+<text xml:space="preserve" x="509.0" y="519.0" fill="#e07a72">15 err</text>
+<text xml:space="preserve" x="557.3" y="519.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="565.4" y="519.0" fill="#d9a441">59 retry</text>
+<text xml:space="preserve" x="26.0" y="538.0" fill="#d6d3c6">    $   5.35  Fix timezone handling                       / </text>
+<text xml:space="preserve" x="509.0" y="538.0" fill="#e07a72">2 err</text>
+<text xml:space="preserve" x="549.2" y="538.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="538.0" fill="#d9a441">9 retry</text>
+<text xml:space="preserve" x="26.0" y="557.0" fill="#d6d3c6">    $   5.34  Upgrade dependency                          / </text>
+<text xml:space="preserve" x="509.0" y="557.0" fill="#e07a72">2 err</text>
+<text xml:space="preserve" x="549.2" y="557.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="557.0" fill="#d9a441">5 retry</text>
+<text xml:space="preserve" x="26.0" y="576.0" fill="#d6d3c6">    $   5.17  Port build to CI                            / </text>
+<text xml:space="preserve" x="509.0" y="576.0" fill="#e07a72">5 err</text>
+<text xml:space="preserve" x="549.2" y="576.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="576.0" fill="#d9a441">12 retry</text>
+<text xml:space="preserve" x="26.0" y="595.0" fill="#d6d3c6">    $   4.99  Investigate slow query                      / </text>
+<text xml:space="preserve" x="509.0" y="595.0" fill="#e07a72">1 err</text>
+<text xml:space="preserve" x="549.2" y="595.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="595.0" fill="#d9a441">8 retry</text>
+<text xml:space="preserve" x="26.0" y="614.0" fill="#d6d3c6">    $   3.30  Add pagination                              / </text>
+<text xml:space="preserve" x="509.0" y="614.0" fill="#e07a72">2 err</text>
+<text xml:space="preserve" x="549.2" y="614.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="614.0" fill="#d9a441">6 retry</text>
+<text xml:space="preserve" x="26.0" y="633.0" fill="#d6d3c6">    $   3.26  Investigate slow query                      / </text>
+<text xml:space="preserve" x="509.0" y="633.0" fill="#e07a72">1 err</text>
+<text xml:space="preserve" x="549.2" y="633.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="633.0" fill="#d9a441">3 retry</text>
+<text xml:space="preserve" x="26.0" y="652.0" fill="#d6d3c6">    $   1.88  Debug memory growth                         / </text>
+<text xml:space="preserve" x="509.0" y="652.0" fill="#e07a72">3 err</text>
+<text xml:space="preserve" x="549.2" y="652.0" fill="#d6d3c6"> </text>
+<text xml:space="preserve" x="557.3" y="652.0" fill="#d9a441">4 retry</text>
+<text xml:space="preserve" x="26.0" y="690.0" fill="#d6d3c6">  TOOL USE   909 calls, </text>
+<text xml:space="preserve" x="219.2" y="690.0" fill="#e07a72">51 failed</text>
+<text xml:space="preserve" x="26.0" y="709.0" fill="#d6d3c6">    Bash                               </text>
+<text xml:space="preserve" x="340.0" y="709.0" fill="#5fb3cf">██████████████</text>
+<text xml:space="preserve" x="452.7" y="709.0" fill="#d6d3c6">   424  </text>
+<text xml:space="preserve" x="517.1" y="709.0" fill="#e07a72">16 failed</text>
+<text xml:space="preserve" x="26.0" y="728.0" fill="#d6d3c6">    Read                               </text>
+<text xml:space="preserve" x="340.0" y="728.0" fill="#5fb3cf">█████</text>
+<text xml:space="preserve" x="380.2" y="728.0" fill="#3a3a31">·········</text>
+<text xml:space="preserve" x="452.7" y="728.0" fill="#d6d3c6">   150  </text>
+<text xml:space="preserve" x="517.1" y="728.0" fill="#e07a72">13 failed</text>
+<text xml:space="preserve" x="26.0" y="747.0" fill="#d6d3c6">    Edit                               </text>
+<text xml:space="preserve" x="340.0" y="747.0" fill="#5fb3cf">████</text>
+<text xml:space="preserve" x="372.2" y="747.0" fill="#3a3a31">··········</text>
+<text xml:space="preserve" x="452.7" y="747.0" fill="#d6d3c6">   135  </text>
+<text xml:space="preserve" x="517.1" y="747.0" fill="#e07a72">11 failed</text>
+<text xml:space="preserve" x="26.0" y="766.0" fill="#d6d3c6">    Grep                               </text>
+<text xml:space="preserve" x="340.0" y="766.0" fill="#5fb3cf">███</text>
+<text xml:space="preserve" x="364.1" y="766.0" fill="#3a3a31">···········</text>
+<text xml:space="preserve" x="452.7" y="766.0" fill="#d6d3c6">    89  </text>
+<text xml:space="preserve" x="517.1" y="766.0" fill="#e07a72">7 failed</text>
+<text xml:space="preserve" x="26.0" y="785.0" fill="#d6d3c6">    Write                              </text>
+<text xml:space="preserve" x="340.0" y="785.0" fill="#5fb3cf">██</text>
+<text xml:space="preserve" x="356.1" y="785.0" fill="#3a3a31">············</text>
+<text xml:space="preserve" x="452.7" y="785.0" fill="#d6d3c6">    48  </text>
+<text xml:space="preserve" x="517.1" y="785.0" fill="#e07a72">3 failed</text>
+<text xml:space="preserve" x="26.0" y="804.0" fill="#d6d3c6">    Glob                               </text>
+<text xml:space="preserve" x="340.0" y="804.0" fill="#5fb3cf">█</text>
+<text xml:space="preserve" x="348.0" y="804.0" fill="#3a3a31">·············</text>
+<text xml:space="preserve" x="452.7" y="804.0" fill="#d6d3c6">    35  </text>
+<text xml:space="preserve" x="517.1" y="804.0" fill="#e07a72">1 failed</text>
+<text xml:space="preserve" x="26.0" y="823.0" fill="#d6d3c6">    WebFetch                           </text>
+<text xml:space="preserve" x="340.0" y="823.0" fill="#5fb3cf">█</text>
+<text xml:space="preserve" x="348.0" y="823.0" fill="#3a3a31">·············</text>
+<text xml:space="preserve" x="452.7" y="823.0" fill="#d6d3c6">    28</text>
+<text xml:space="preserve" x="26.0" y="861.0" fill="#fbfaf5" font-weight="bold">  COST OF ONE RESPONSE, BY POSITION IN SESSION</text>
+<text xml:space="preserve" x="26.0" y="880.0" fill="#d6d3c6">    turn                                   context       cost</text>
+<text xml:space="preserve" x="26.0" y="899.0" fill="#d6d3c6">    0-24         </text>
+<text xml:space="preserve" x="162.9" y="899.0" fill="#5fb3cf">███████</text>
+<text xml:space="preserve" x="219.2" y="899.0" fill="#3a3a31">···············</text>
+<text xml:space="preserve" x="340.0" y="899.0" fill="#d6d3c6">      46.2K     </text>
+<text xml:space="preserve" x="468.8" y="899.0" fill="#7dc98a" font-weight="bold">$0.074</text>
+<text xml:space="preserve" x="26.0" y="918.0" fill="#d6d3c6">    25-49        </text>
+<text xml:space="preserve" x="162.9" y="918.0" fill="#5fb3cf">████████</text>
+<text xml:space="preserve" x="227.3" y="918.0" fill="#3a3a31">··············</text>
+<text xml:space="preserve" x="340.0" y="918.0" fill="#d6d3c6">      88.9K     </text>
+<text xml:space="preserve" x="468.8" y="918.0" fill="#7dc98a" font-weight="bold">$0.093</text>
+<text xml:space="preserve" x="26.0" y="937.0" fill="#d6d3c6">    50-74        </text>
+<text xml:space="preserve" x="162.9" y="937.0" fill="#5fb3cf">██████████</text>
+<text xml:space="preserve" x="243.4" y="937.0" fill="#3a3a31">············</text>
+<text xml:space="preserve" x="340.0" y="937.0" fill="#d6d3c6">     124.5K     </text>
+<text xml:space="preserve" x="468.8" y="937.0" fill="#7dc98a" font-weight="bold">$0.108</text>
+<text xml:space="preserve" x="26.0" y="956.0" fill="#d6d3c6">    75-99        </text>
+<text xml:space="preserve" x="162.9" y="956.0" fill="#5fb3cf">████████████</text>
+<text xml:space="preserve" x="259.5" y="956.0" fill="#3a3a31">··········</text>
+<text xml:space="preserve" x="340.0" y="956.0" fill="#d6d3c6">     173.8K     </text>
+<text xml:space="preserve" x="468.8" y="956.0" fill="#7dc98a" font-weight="bold">$0.132</text>
+<text xml:space="preserve" x="26.0" y="975.0" fill="#d6d3c6">    100-124      </text>
+<text xml:space="preserve" x="162.9" y="975.0" fill="#5fb3cf">█████████████</text>
+<text xml:space="preserve" x="267.5" y="975.0" fill="#3a3a31">·········</text>
+<text xml:space="preserve" x="339.9" y="975.0" fill="#d6d3c6">     215.3K     </text>
+<text xml:space="preserve" x="468.8" y="975.0" fill="#7dc98a" font-weight="bold">$0.145</text>
+<text xml:space="preserve" x="26.0" y="994.0" fill="#d6d3c6">    125-149      </text>
+<text xml:space="preserve" x="162.9" y="994.0" fill="#5fb3cf">████████████████</text>
+<text xml:space="preserve" x="291.7" y="994.0" fill="#3a3a31">······</text>
+<text xml:space="preserve" x="340.0" y="994.0" fill="#d6d3c6">     259.4K     </text>
+<text xml:space="preserve" x="468.8" y="994.0" fill="#7dc98a" font-weight="bold">$0.179</text>
+<text xml:space="preserve" x="26.0" y="1013.0" fill="#d6d3c6">    150-174      </text>
+<text xml:space="preserve" x="162.9" y="1013.0" fill="#5fb3cf">████████████████</text>
+<text xml:space="preserve" x="291.7" y="1013.0" fill="#3a3a31">······</text>
+<text xml:space="preserve" x="340.0" y="1013.0" fill="#d6d3c6">     301.5K     </text>
+<text xml:space="preserve" x="468.8" y="1013.0" fill="#7dc98a" font-weight="bold">$0.184</text>
+<text xml:space="preserve" x="26.0" y="1032.0" fill="#d6d3c6">    175-199      </text>
+<text xml:space="preserve" x="162.9" y="1032.0" fill="#5fb3cf">███████████████████</text>
+<text xml:space="preserve" x="315.8" y="1032.0" fill="#3a3a31">···</text>
+<text xml:space="preserve" x="340.0" y="1032.0" fill="#d6d3c6">     345.4K     </text>
+<text xml:space="preserve" x="468.8" y="1032.0" fill="#7dc98a" font-weight="bold">$0.216</text>
+<text xml:space="preserve" x="26.0" y="1051.0" fill="#d6d3c6">    200-224      </text>
+<text xml:space="preserve" x="162.9" y="1051.0" fill="#5fb3cf">██████████████████████</text>
+<text xml:space="preserve" x="340.0" y="1051.0" fill="#d6d3c6">     388.6K     </text>
+<text xml:space="preserve" x="468.8" y="1051.0" fill="#7dc98a" font-weight="bold">$0.248</text>
+<text xml:space="preserve" x="26.0" y="1070.0" fill="#d6d3c6">    225-249      </text>
+<text xml:space="preserve" x="162.9" y="1070.0" fill="#5fb3cf">██████████████████████</text>
+<text xml:space="preserve" x="340.0" y="1070.0" fill="#d6d3c6">     432.1K     </text>
+<text xml:space="preserve" x="468.8" y="1070.0" fill="#7dc98a" font-weight="bold">$0.246</text>
+</svg>
